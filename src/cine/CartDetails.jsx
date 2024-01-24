@@ -42,21 +42,17 @@ export default function CartDetails({ onClose }) {
                                     key={item.id}
                                     className="grid grid-cols-[1fr_auto] gap-4">
                                     <div className="flex items-center gap-4">
-                                        <img
-                                            className="rounded overflow-hidden"
-                                            src={getImgUrl(
-                                                `${item.cover}`
-                                            )}
-                                            alt={item.title}
-                                            width={"50px"}
-                                            height={"50px"}
-                                        />
+                                    <img
+                                    className="w-[50px] h-[50px] object-cover"
+                                    src={item.image}
+                                    alt={item.title}
+                />
                                         <div>
                                             <h3 className="text-base md:text-xl font-bold">
                                                 {item.title}
                                             </h3>
                                             <p className="max-md:text-xs text-[#575A6E]">
-                                                {item.genre}
+                                               Realis date :  {item.realis_date}
                                             </p>
                                             <span className="max-md:text-xs">
                                                 ${item.price}

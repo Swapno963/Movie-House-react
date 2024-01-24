@@ -57,15 +57,16 @@ export default function MovieCard({ movie }) {
                 className="p-4 border border-black/10 shadow-sm dark:border-white/10 rounded-xl"
             >
                 <a href="#" onClick={() => hadleMovieSelection(movie)}>
-                    <img
-                        className="w-full object-cover"
-                        src={getImgUrl(`${movie.cover}`)}
-                        alt={movie.title}
-                    />
+                <img
+                    className="w-full h-[200px] object-cover"
+                    src={movie.image}
+                    alt={movie.title}
+                />
+
                     <figcaption className="pt-4">
                         <h3 className="text-xl mb-1">{movie.title}</h3>
                         <p className="text-[#575A6E] text-sm mb-2">
-                            {movie.genre}
+                            {movie.realis_date}
                         </p>
                         <div className="flex items-center space-x-1 mb-5">
                             <Rating value={movie.rating} />
